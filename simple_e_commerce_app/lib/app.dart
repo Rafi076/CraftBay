@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:simple_e_commerce_app/presentaion/ui/splash.dart';
+import 'package:simple_e_commerce_app/presentaion/ui/screens/splash.dart';
 import 'package:simple_e_commerce_app/presentaion/ui/utils/app_colors.dart';
 
 class CraftBayApp extends StatelessWidget {
