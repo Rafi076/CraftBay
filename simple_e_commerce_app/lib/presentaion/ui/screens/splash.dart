@@ -1,6 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
+import 'package:simple_e_commerce_app/presentaion/ui/screens/email_verification_screen.dart';
+
+import '../widgets/app_logo_widget.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -10,7 +14,20 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+
+  // to move to next screen after Splash screen
+  Future<void> _moveToNextScreen() async{
+
+    await Future.delayed(const Duration(seconds: 3));
+    Get.off(() => const EmailVerificationScreen());
+  }
   @override
+  void initState(){
+    super.initState();
+    _moveToNextScreen();
+  }
+
+
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
@@ -20,7 +37,7 @@ class _SplashScreenState extends State<SplashScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Spacer(),
-              SvgPicture.asset('assets/images/logo.svg', width: 100,),
+              AppLogoWidget(),
               Spacer(),
               const CircularProgressIndicator(),
               const SizedBox(height: 15,),
@@ -33,3 +50,5 @@ class _SplashScreenState extends State<SplashScreen> {
     );
   }
 }
+
+
