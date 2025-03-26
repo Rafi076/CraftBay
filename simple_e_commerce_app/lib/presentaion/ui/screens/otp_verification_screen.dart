@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:simple_e_commerce_app/presentaion/ui/utils/app_colors.dart';
 
 import '../widgets/app_logo_widget.dart';
+import 'complete_profile_screen.dart';
 
 class OtpverificationScreen extends StatefulWidget {
   const OtpverificationScreen({super.key});
@@ -58,7 +61,7 @@ class _OtpVerificationScreenState extends State<OtpverificationScreen> {
               const SizedBox(height: 16,),
               ElevatedButton(
                 // here we did the ElevatedButton functionality at app.dart
-                  onPressed: (){},
+                  onPressed: _onTapNextbutton,
                   child: const Text('Submit')),
               const SizedBox(height: 16,),
               RichText(
@@ -73,7 +76,7 @@ class _OtpVerificationScreenState extends State<OtpverificationScreen> {
                       ]
                   )),
               const SizedBox(height: 16,),
-              TextButton(onPressed: (){},
+              TextButton(onPressed:(){},
                   child: const Text('Resend OTP'))
             ],
           ),
@@ -81,7 +84,10 @@ class _OtpVerificationScreenState extends State<OtpverificationScreen> {
       ),
     );
   }
-
+ // for complete profile Screen
+  void _onTapNextbutton(){
+    Get.to(() => const CompleteProfileScreen());
+  }
   @override
   void dispose() {
     _otpTEController.dispose();
