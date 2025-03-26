@@ -35,7 +35,33 @@ class _CraftBayAppState extends State<CraftBayApp> {
             enabledBorder: _outlineInputBorder(),
             focusedBorder: _outlineInputBorder(),
             errorBorder: _outlineInputBorder(Colors.red),
-        )
+          contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8)
+        ),
+
+
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+              backgroundColor: AppColors.themeColor,
+              foregroundColor: Colors.white,
+              padding: EdgeInsets.symmetric(vertical: 12),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8),
+              ),
+              textStyle: const TextStyle(
+                fontSize: 16,
+              ),
+              fixedSize: const Size.fromWidth(double.maxFinite)
+          ),
+        ),
+
+        textButtonTheme: TextButtonThemeData(
+          style: TextButton.styleFrom(
+            foregroundColor: AppColors.themeColor,
+            textStyle: TextStyle(
+              fontSize: 16
+            )
+          )
+        ),
 
       ),
     );
@@ -43,7 +69,7 @@ class _CraftBayAppState extends State<CraftBayApp> {
 
   OutlineInputBorder _outlineInputBorder([Color? color]){
     return OutlineInputBorder(
-      borderSide: BorderSide(color: color ?? AppColors.themeColor, width: 1.4),
+      borderSide: BorderSide(color: color ?? AppColors.themeColor, width: 1),
       borderRadius: BorderRadius.circular(8)
     );
   }
