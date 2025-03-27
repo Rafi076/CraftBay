@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:simple_e_commerce_app/presentaion/ui/screens/email_verification_screen.dart';
 
 import '../widgets/app_logo_widget.dart';
+import 'home_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -19,7 +20,8 @@ class _SplashScreenState extends State<SplashScreen> {
   Future<void> _moveToNextScreen() async{
 
     await Future.delayed(const Duration(seconds: 3));
-    Get.off(() => const EmailVerificationScreen());
+    // Get.off(() => const EmailVerificationScreen());
+    Get.off(() => const HomeScreen());
   }
   @override
   void initState(){

@@ -23,6 +23,7 @@ class _CraftBayAppState extends State<CraftBayApp> {
         progressIndicatorTheme: const ProgressIndicatorThemeData(
           color: AppColors.themeColor,
         ),
+
         textTheme: const TextTheme(
           headlineLarge: TextStyle(
             fontSize: 32,
@@ -35,6 +36,10 @@ class _CraftBayAppState extends State<CraftBayApp> {
             enabledBorder: _outlineInputBorder(),
             focusedBorder: _outlineInputBorder(),
             errorBorder: _outlineInputBorder(Colors.red),
+          hintStyle: TextStyle(
+              color: Colors.grey,
+              fontWeight: FontWeight.w400
+            ),
           contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8)
         ),
 
@@ -43,7 +48,7 @@ class _CraftBayAppState extends State<CraftBayApp> {
           style: ElevatedButton.styleFrom(
               backgroundColor: AppColors.themeColor,
               foregroundColor: Colors.white,
-              padding: EdgeInsets.symmetric(vertical: 12),
+              padding: const EdgeInsets.symmetric(vertical: 12),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8),
               ),
@@ -57,7 +62,7 @@ class _CraftBayAppState extends State<CraftBayApp> {
         textButtonTheme: TextButtonThemeData(
           style: TextButton.styleFrom(
             foregroundColor: AppColors.themeColor,
-            textStyle: TextStyle(
+            textStyle: const TextStyle(
               fontSize: 16
             )
           )
