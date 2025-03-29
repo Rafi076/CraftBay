@@ -8,6 +8,7 @@ import '../utils/app_colors.dart';
 import '../widgets/app_bar_icon_button.dart';
 import '../widgets/home_banner_slider.dart';
 import '../widgets/search_text_field.dart';
+import '../widgets/seciton_header.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -17,6 +18,9 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,8 +34,18 @@ class _HomeScreenState extends State<HomeScreen> {
               textEditingController: TextEditingController(),),
             SizedBox(height: 16,),
             // carousel slider code
-            HomeBannerSlider()
+            HomeBannerSlider(),
 
+            SizedBox(height: 16,),
+
+
+            // Categories & 'see all'
+            SectionHeader(
+              title: 'Categories',
+              onTap: (){} ,
+            ),
+
+            SizedBox(height: 8,),
           ],
         ),
       ),
@@ -62,6 +76,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
+
 
 
 
