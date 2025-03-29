@@ -1,9 +1,12 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:simple_e_commerce_app/presentaion/ui/utils/assets_path.dart';
 
+import '../utils/app_colors.dart';
 import '../widgets/app_bar_icon_button.dart';
+import '../widgets/home_banner_slider.dart';
 import '../widgets/search_text_field.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -25,6 +28,9 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(height: 16,),
             SearchTextField(
               textEditingController: TextEditingController(),),
+            SizedBox(height: 16,),
+            // carousel slider code
+            HomeBannerSlider()
 
           ],
         ),
@@ -56,5 +62,6 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
+
 
 
