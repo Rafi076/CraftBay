@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:simple_e_commerce_app/presentaion/ui/utils/assets_path.dart';
 import '../widgets/app_bar_icon_button.dart';
 import '../widgets/home_banner_slider.dart';
@@ -8,6 +10,7 @@ import '../widgets/horizontal_categories_listview.dart';
 import '../widgets/horizontal_product_list_view.dart';
 import '../widgets/search_text_field.dart';
 import '../widgets/seciton_header.dart';
+import 'category_list_screen.dart';
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
   @override
@@ -87,7 +90,9 @@ class _HomeScreenState extends State<HomeScreen> {
       children: [
         SectionHeader(
           title: 'Categories',
-          onTap: () {},
+          onTap: () {
+            Get.to(()=>const CategoryListScreen());
+          },
         ),
         const SizedBox(
           height: 8,

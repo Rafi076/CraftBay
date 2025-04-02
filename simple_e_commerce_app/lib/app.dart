@@ -67,6 +67,14 @@ class _CraftBayAppState extends State<CraftBayApp> {
             )
           )
         ),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.white,
+          titleTextStyle: TextStyle(
+            color: Colors.black54,
+            fontSize: 20,
+            fontWeight: FontWeight.w500
+          )
+        )
 
       ),
     );
