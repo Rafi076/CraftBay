@@ -25,7 +25,7 @@ class PopularListScreen extends StatelessWidget {
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 3, childAspectRatio: 0.75),
           itemBuilder: (context, index) {
-            return const popularCard(); // here willbe PopularCard()
+            return const popularCard();
           }),
     );
   }

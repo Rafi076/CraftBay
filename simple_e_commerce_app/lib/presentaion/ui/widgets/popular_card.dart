@@ -40,7 +40,7 @@ class popularCard extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("Product Name",
+                      const Text("Product Name",
                           maxLines: 1,
                           style: TextStyle(
                               fontWeight: FontWeight.w500,
@@ -49,14 +49,14 @@ class popularCard extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(
+                          const Text(
                               '\$120',
                               style: TextStyle(
                                   fontWeight: FontWeight.w500,
                                   color: AppColors.themeColor
                               )
                           ),
-                          Wrap(
+                          const Wrap(
                             crossAxisAlignment: WrapCrossAlignment.center, // 3 beside Star
                             children: [
                               Icon(
@@ -74,7 +74,7 @@ class popularCard extends StatelessWidget {
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(20)
                             ),
-                            child: Padding(
+                            child: const Padding(
                               padding: EdgeInsets.all(5),
                               child: Icon(
                                 Icons.favorite_outline_rounded,
