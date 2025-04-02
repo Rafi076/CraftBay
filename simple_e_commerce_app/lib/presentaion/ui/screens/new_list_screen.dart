@@ -18,14 +18,14 @@ class NewListScreen extends StatelessWidget {
           fontSize: 20,
           fontWeight: FontWeight.w500,
         ),
-        title: const Text('New'),// Style icons
+        title: const Text('New Arrival'),// Style icons
       ),
       body: GridView.builder(
           itemCount: 20,
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 3, childAspectRatio: 0.75),
           itemBuilder: (context, index) {
-            return const popularCard(); // here willbe PopularCard()
+            return const popularCard();
           }),
     );
   }
