@@ -5,8 +5,8 @@ import '../widgets/category_card.dart';
 import '../widgets/popular_card.dart';
 import '../widgets/product_card.dart';
 
-class PopularListScreen extends StatelessWidget {
-  const PopularListScreen({super.key});
+class SpecialListScreen extends StatelessWidget {
+  const SpecialListScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class PopularListScreen extends StatelessWidget {
           fontSize: 20,
           fontWeight: FontWeight.w500,
         ),
-        title: const Text('Popular'),// Style icons
+        title: const Text('Special'),// Style icons
       ),
       body: GridView.builder(
           itemCount: 20,

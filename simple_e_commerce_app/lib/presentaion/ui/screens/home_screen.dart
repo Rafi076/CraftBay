@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:simple_e_commerce_app/presentaion/ui/screens/new_list_screen.dart';
+import 'package:simple_e_commerce_app/presentaion/ui/screens/popular_list_screen.dart';
+import 'package:simple_e_commerce_app/presentaion/ui/screens/special_list%20screen.dart';
 import 'package:simple_e_commerce_app/presentaion/ui/utils/assets_path.dart';
 import '../widgets/app_bar_icon_button.dart';
 import '../widgets/home_banner_slider.dart';
@@ -47,7 +50,9 @@ class _HomeScreenState extends State<HomeScreen> {
       children: [
         SectionHeader(
           title: 'Popular',
-          onTap: () {},
+          onTap: () {
+            Get.to(()=> PopularListScreen());
+          },
         ),
         SizedBox(
           height: 180,
@@ -61,7 +66,9 @@ class _HomeScreenState extends State<HomeScreen> {
       children: [
         SectionHeader(
           title: 'New',
-          onTap: () {},
+          onTap: () {
+            Get.to(()=>const NewListScreen());
+            },
         ),
         SizedBox(
           height: 180,
@@ -75,7 +82,9 @@ class _HomeScreenState extends State<HomeScreen> {
       children: [
         SectionHeader(
           title: 'Special',
-          onTap: () {},
+          onTap: () {
+            Get.to(()=>const SpecialListScreen());
+            },
         ),
         SizedBox(
           height: 180,
