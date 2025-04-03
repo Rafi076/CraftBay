@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:simple_e_commerce_app/presentaion/state_holders/bottom_nav_bar_controller.dart';
 import 'package:simple_e_commerce_app/presentaion/ui/widgets/category_card.dart';
 
 class CategoryListScreen extends StatelessWidget {
@@ -16,6 +18,9 @@ class CategoryListScreen extends StatelessWidget {
           fontWeight: FontWeight.w500,
         ),
         title: const Text('Categories'),
+        leading: IconButton(onPressed: () {
+          Get.find<BottomNavBarController>().backToHome();
+        }, icon: const Icon(Icons.arrow_back_ios)),
         iconTheme: const IconThemeData(color: Colors.black54), // Style icons
       ),
       body: GridView.builder(

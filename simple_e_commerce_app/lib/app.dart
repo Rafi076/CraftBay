@@ -3,6 +3,8 @@ import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:simple_e_commerce_app/presentaion/ui/screens/splash.dart';
 import 'package:simple_e_commerce_app/presentaion/ui/utils/app_colors.dart';
 
+import 'controller_binder.dart';
+
 class CraftBayApp extends StatefulWidget {
   const CraftBayApp({super.key});
 
@@ -15,6 +17,7 @@ class _CraftBayAppState extends State<CraftBayApp> {
   Widget build(BuildContext context) {
     return  GetMaterialApp(
       home: const SplashScreen(),
+      initialBinding: ControllerBinder(),
       theme: ThemeData(
         colorSchemeSeed: AppColors.themeColor,
 
@@ -36,7 +39,7 @@ class _CraftBayAppState extends State<CraftBayApp> {
             enabledBorder: _outlineInputBorder(),
             focusedBorder: _outlineInputBorder(),
             errorBorder: _outlineInputBorder(Colors.red),
-          hintStyle: TextStyle(
+          hintStyle: const TextStyle(
               color: Colors.grey,
               fontWeight: FontWeight.w400
             ),

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:simple_e_commerce_app/presentaion/state_holders/bottom_nav_bar_controller.dart';
 import 'package:simple_e_commerce_app/presentaion/ui/screens/new_list_screen.dart';
 import 'package:simple_e_commerce_app/presentaion/ui/screens/popular_list_screen.dart';
 import 'package:simple_e_commerce_app/presentaion/ui/screens/special_list%20screen.dart';
@@ -54,7 +55,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Get.to(()=> PopularListScreen());
           },
         ),
-        SizedBox(
+        const SizedBox(
           height: 180,
           child: HorizontalProductListView(),
         )
@@ -70,7 +71,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Get.to(()=>const NewListScreen());
             },
         ),
-        SizedBox(
+        const SizedBox(
           height: 180,
           child: HorizontalProductListView(),
         )
@@ -86,7 +87,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Get.to(()=>const SpecialListScreen());
             },
         ),
-        SizedBox(
+        const SizedBox(
           height: 180,
           child: HorizontalProductListView(),
         )
@@ -100,7 +101,8 @@ class _HomeScreenState extends State<HomeScreen> {
         SectionHeader(
           title: 'Categories',
           onTap: () {
-            Get.to(()=>const CategoryListScreen());
+            // pressing 'see all' of Categories section then the bottom navbar of category automatically selected
+            Get.find<BottomNavBarController>().selectCategory();
           },
         ),
         const SizedBox(
@@ -108,7 +110,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
 
         // list of Categories
-        SizedBox(
+        const SizedBox(
           height: 140,
           child: HorizontalCategorieListView(),
         )
