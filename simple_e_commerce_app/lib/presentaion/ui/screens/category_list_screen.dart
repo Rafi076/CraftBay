@@ -23,7 +23,7 @@ class CategoryListScreen extends StatelessWidget {
               },
               icon: const Icon(Icons.arrow_back_ios),
             ),
-            title: const Text('Categories'),
+            title: const Text('Categories '),
           ),
           body: GridView.builder(
               itemCount: 20,
