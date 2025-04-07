@@ -13,7 +13,7 @@ class BottomNavBarController extends GetxController{
   }
 
   void selectCategory(){
-    changeIndex(4);
+    changeIndex(1);
   }
 
   void backToHome(){
