@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:simple_e_commerce_app/presentaion/ui/widgets/popular_card.dart';
+import 'package:simple_e_commerce_app/presentaion/ui/widgets/product_card.dart';
 
 import '../utils/app_colors.dart';
 import '../utils/assets_path.dart';
