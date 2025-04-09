@@ -61,7 +61,7 @@ class _ProductImageSliderState extends State<ProductImageSlider> {
                       Container(
                         height: 12,
                         width: 12,
-                        margin: EdgeInsets.only(right: 4),
+                        margin: const EdgeInsets.only(right: 4),
                         decoration: BoxDecoration(
                             color:
                             currentIndex == i ? AppColors.themeColor : Colors.white,
