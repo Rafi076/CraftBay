@@ -53,6 +53,52 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                     )
                   ],
                 ),
+                const SizedBox(height: 4,),
+                Wrap(
+                  crossAxisAlignment: WrapCrossAlignment.center,
+                  children: [
+                    const Wrap(
+                      crossAxisAlignment: WrapCrossAlignment.center, // 3 beside Star
+                      children: [
+                        Icon(
+                          Icons.star,
+                          color: Colors.amber,
+                        ),
+                        Text('3', style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black54
+                        ))
+                      ],
+                    ),
+                    const SizedBox(width: 10,),
+                    TextButton(
+                      onPressed: (){},
+                      child: const Text(
+                          'Reviews',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              color: AppColors.themeColor
+                          )
+                      ),
+                    ),
+                    const SizedBox(width: 10,),
+
+                    Card(
+                      color: AppColors.themeColor,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20)
+                      ),
+                      child: const Padding(
+                        padding: EdgeInsets.all(5),
+                        child: Icon(
+                          Icons.favorite_outline_rounded,
+                          size: 16,
+                          color: Colors.white,
+                        ),
+                      ),
+                    )
+                  ],
+                ),
 
               ],
             ),
