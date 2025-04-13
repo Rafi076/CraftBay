@@ -5,6 +5,7 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:item_count_number_button/item_count_number_button.dart';
 import 'package:simple_e_commerce_app/presentaion/ui/utils/app_colors.dart';
 import '../../state_holders/bottom_nav_bar_controller.dart';
+import '../widgets/collor_picker.dart';
 import '../widgets/product_image_slider.dart';
 
 class ProductDetailsScreen extends StatefulWidget {
@@ -41,7 +42,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                     Expanded(
                         child: Text(
                       'Nike Shoe 2025 latest model Special offer!! 20% Off!',
-                      style: Theme.of(context).textTheme.titleMedium,
+                      style: Theme.of(context).textTheme.titleLarge,
                     )),
                     ItemCount(
                       initialValue: 1,
@@ -99,7 +100,13 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                     )
                   ],
                 ),
-
+                const SizedBox(height: 8,),
+                ColorPicker(colors: const[
+                  Colors.grey,
+                  Colors.green,
+                  Colors.yellow,
+                  Colors.blue,
+                ],onColorSelected: (color){})
               ],
             ),
           )
@@ -112,3 +119,6 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
     Get.find<BottomNavBarController>().backToHome();
   }
 }
+
+
+
