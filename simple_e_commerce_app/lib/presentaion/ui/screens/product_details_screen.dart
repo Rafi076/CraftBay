@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:item_count_number_button/item_count_number_button.dart';
 import 'package:simple_e_commerce_app/presentaion/ui/utils/app_colors.dart';
+import 'package:simple_e_commerce_app/presentaion/ui/widgets/size_picker.dart';
 import '../../state_holders/bottom_nav_bar_controller.dart';
 import '../widgets/collor_picker.dart';
 import '../widgets/product_image_slider.dart';
@@ -54,41 +55,43 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                     )
                   ],
                 ),
-                const SizedBox(height: 4,),
+                const SizedBox(
+                  height: 4,
+                ),
                 Wrap(
                   crossAxisAlignment: WrapCrossAlignment.center,
                   children: [
                     const Wrap(
-                      crossAxisAlignment: WrapCrossAlignment.center, // 3 beside Star
+                      crossAxisAlignment: WrapCrossAlignment.center,
+                      // 3 beside Star
                       children: [
                         Icon(
                           Icons.star,
                           color: Colors.amber,
                         ),
-                        Text('3', style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            color: Colors.black54
-                        ))
+                        Text('3',
+                            style: TextStyle(
+                                fontWeight: FontWeight.w500,
+                                color: Colors.black54))
                       ],
                     ),
-                    const SizedBox(width: 10,),
+                    const SizedBox(
+                      width: 10,
+                    ),
                     TextButton(
-                      onPressed: (){},
-                      child: const Text(
-                          'Reviews',
+                      onPressed: () {},
+                      child: const Text('Reviews',
                           style: TextStyle(
                               fontWeight: FontWeight.w500,
-                              color: AppColors.themeColor
-                          )
-                      ),
+                              color: AppColors.themeColor)),
                     ),
-                    const SizedBox(width: 10,),
-
+                    const SizedBox(
+                      width: 10,
+                    ),
                     Card(
                       color: AppColors.themeColor,
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20)
-                      ),
+                          borderRadius: BorderRadius.circular(20)),
                       child: const Padding(
                         padding: EdgeInsets.all(5),
                         child: Icon(
@@ -100,13 +103,30 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                     )
                   ],
                 ),
-                const SizedBox(height: 8,),
-                ColorPicker(colors: const[
+                const SizedBox(
+                  height: 8,
+                ),
+                ColorPicker(colors: const [
                   Colors.grey,
                   Colors.green,
                   Colors.yellow,
                   Colors.blue,
-                ],onColorSelected: (color){})
+                ], onColorSelected: (color) {}),
+                const SizedBox(
+                  height: 16,
+                ),
+                SizePicker(
+                  sizes: const [
+                    'S',
+                    'M',
+                    'L',
+                    'XL',
+                    'XXl',
+                  ],
+                  onSizeSelected: (String selectedSize) {},
+                ),
+                const SizedBox(height: 16,),
+                const Text('Description')
               ],
             ),
           )
@@ -119,6 +139,3 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
     Get.find<BottomNavBarController>().backToHome();
   }
 }
-
-
-
