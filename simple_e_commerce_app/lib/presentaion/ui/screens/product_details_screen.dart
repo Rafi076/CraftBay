@@ -24,7 +24,8 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
         title: const Text('Product Detail'), // Style icons
         leading: IconButton(
           onPressed: () {
-            backToHome();
+            backToHome(); // ✅ calls controller to switch tab
+            Get.back(); // ✅ pops ProductDetail page from stack
           },
           icon: const Icon(Icons.arrow_back_ios),
         ),
