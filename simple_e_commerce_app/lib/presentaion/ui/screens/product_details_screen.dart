@@ -100,7 +100,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                         const SizedBox(
                           height: 8,
                         ),
-                        Text('''A shoe is a type of footwear worn on the feet, designed to protect and comfort them. It typically covers the foot and may extend up to the ankle, often made of leather with a sole and heel. Shoes serve various functions, including protection from the elements, improved comfort, and as an item of fashion or decoration.esigned to protect and comfort them. It typically covers the foot and may extend up to the ankle, often made of leather with a sole and heel. Shoes serve various functions, including protection from the elements, improved comfort, and as an item of fashion or decoration. ''',
+                        const Text('''A shoe is a type of footwear worn on the feet, designed to protect and comfort them. It typically covers the foot and may extend up to the ankle, often made of leather with a sole and heel. Shoes serve various functions, including protection from the elements, improved comfort, and as an item of fashion or decoration.esigned to protect and comfort them. It typically covers the foot and may extend up to the ankle, often made of leather with a sole and heel. Shoes serve various functions, including protection from the elements, improved comfort, and as an item of fashion or decoration. ''',
                         style: TextStyle(color: Colors.black45),),
                       ],
                     );
