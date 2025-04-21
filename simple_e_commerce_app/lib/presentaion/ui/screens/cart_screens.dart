@@ -7,6 +7,7 @@ import 'package:simple_e_commerce_app/presentaion/ui/utils/assets_path.dart';
 
 import '../../state_holders/bottom_nav_bar_controller.dart';
 import '../utils/app_colors.dart';
+import '../widgets/cart/cart_item_widget.dart';
 
 class CartScreen extends StatefulWidget {
   const CartScreen({super.key});
@@ -16,8 +17,6 @@ class CartScreen extends StatefulWidget {
 }
 
 class _CartScreenState extends State<CartScreen> {
-  late TextTheme textTheme = Theme.of(context).textTheme;
-
   @override
   Widget build(BuildContext context) {
     return PopScope(
@@ -46,80 +45,8 @@ class _CartScreenState extends State<CartScreen> {
             Expanded(
                 child: ListView.builder(
               itemBuilder: (context, index) {
-                return Card(
-                  elevation: 2,
-                  color: Colors.white,
-                  margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 5),
-                  child: Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Image.asset(
-                          AssetsPath.dummyProductimg,
-                          height: 80,
-                          width: 80,
-                          fit: BoxFit.scaleDown,
-                        ),
-                      ),
-                      Expanded(
-                        child: Column(
-                          children: [
-                            Row(
-                              children: [
-                                Expanded(
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        'Title of Product',
-                                        style: textTheme.bodyLarge,
-                                      ),
-                                      Wrap(
-                                        spacing: 8,
-                                        children: [
-                                          Text('Color: Red ',
-                                              style: textTheme.bodySmall
-                                                  ?.copyWith(
-                                                      color: Colors.grey)),
-                                          Text(
-                                            'Size: XL',
-                                            style: textTheme.bodySmall
-                                                ?.copyWith(color: Colors.grey),
-                                          ),
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                IconButton(
-                                    onPressed: () {}, icon: Icon(Icons.delete))
-                              ],
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text('\$100',style: textTheme.titleMedium?.copyWith(
-                                  color: AppColors.themeColor
-                                )),
-                                ItemCount(
-                                  initialValue: 1,
-                                  minValue: 1,
-                                  maxValue: 20,
-                                  decimalPlaces: 0,
-                                  color: AppColors.themeColor,
-                                  onChanged: (value) {},
-                                )
-                              ],
-                            )
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
-                );
+                return const CartItemWidget();
               },
-
               itemCount: 4,
             )),
             Container(
@@ -135,6 +62,8 @@ class _CartScreenState extends State<CartScreen> {
     Get.find<BottomNavBarController>().backToHome();
   }
 }
+
+
 
 Widget _buildPriceAndAddToCartSection(BuildContext context) {
   return Container(
