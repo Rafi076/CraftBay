@@ -14,11 +14,11 @@ CrafyBay is a Flutter-based e-commerce mobile application built with clean archi
 📁 Dependencies Added:
 
 Package	Description
-  flutter_svg	----- For rendering SVG images
-  get	------- Lightweight state management and routing
-  pin_code_fields: ^8.0.1	----- For OTP and PIN code input fields
-  carousel_slider	------ For displaying image sliders and promotional banners
-  item_count_number_button: ^1.9.2	------- For quantity selection in product pages
+  > flutter_svg	----- For rendering SVG image
+  > get	------- Lightweight state management and routing
+  > pin_code_fields: ^8.0.1	----- For OTP and PIN code input fields
+  > carousel_slider	------ For displaying image sliders and promotional banners
+  > item_count_number_button: ^1.9.2	------- For quantity selection in product pages
 
 🛠 Setup Instructions
 
